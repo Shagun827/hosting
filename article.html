@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+.w3-example {
+    padding: 8px 20px;
+    margin: 24px -20px;
+    box-shadow: none!important;
+}
+w3-example {
+    background-color:black;
+    border-radius: 5px;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+.w3-code, w3-codeline {
+    font-size: 15px;
+}
+.w3-code {
+    border-left: 4px solid #04AA6D;
+}
+.w3-section, .w3-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+}
+.w3-code {
+    width: auto;
+    background-color:black;
+    color: white;
+    padding: 8px 12px;
+    border-left: 4px solid #4CAF50;
+    word-wrap: break-word;
+}
+
+.w3-code, .w3-codespan {
+    font-family: Consolas,"courier new";
+    font-size: 16px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<h1><u>Sub-arrays of an array</u></h1>
+<p>Dear readers,
+    We hope that you are enjoying your coding journey!
+    Let&#39;s now move to the next problem, that is ‘Sub-arrays of an array’ of chapter ‘Array and
+    Functions’. This is a bit of a different problem but an easy one. Before moving to the problem,
+    we ask you, what actually are subarrays of an array.
+    You might have studied about a subset of a set in your school. Well, like a subset, a sub-array is
+    an array of a length smaller or equal to the given array’s length, whose members are all
+    members of the given array. But unlike a sub-set, in a sub-array, the sequence should be
+    contiguous.
+    Let’s jump to the problem.</p>
+<h2><u>Understanding the Problem:</u></h2>
+<p>In the question as it says, you are given an array of size &#39;n&#39; and n elements of the same array.
+    We are required to find and print all the subarrays of the given array.
+    So, the input part is easy. We can take input of an array straightforwardly. Then skip to the
+    crucial part, in which we will think about the solution of the problem.
+    Before moving to the solution part, make sure you try to solve it on your own. Like, Rob
+    Siltanen said,“People who are crazy enough to think they can change the world, are the ones
+    who do.”
+    You may also take help from the question video, where our team has particularly explained
+    what exactly is required to be done.
+    Now, we are ready to move to the solution part.</p>
+
+<div class="w3-example">
+    <h2><u>Solution</u></h2>
+    <div class="w3-code notranslate htmlHigh">
+        import java.io.*;<br>
+import java.util.*;<br>
+public class Main{<br>
+public static void main(String[] args) throws Exception {<br>
+    Scanner scn = new Scanner(System.in);<br>
+    int n = scn.nextInt;<br>
+    int[] arr = new int[n];<br>
+    for(int i = 0; i &lt; n; i++){<br>
+       arr[i] = scn.nextInt;<br>
+    }<br>
+    for(int i = 0; i &lt; arr.length; i++){<br>
+       for(int j = i; j &lt; arr.length; j++){<br>
+          for(int k = i; k &lt;= j; k++){<br>
+            System.out.print(arr[k] + &quot;\t&quot;);<br>
+          }<br>
+System.out.println();<br>
+       }<br>
+    }<br>
+ }<br>
+}<br>
+          <br><br>  <button type="button" onclick="alert('Run the Code')">Run</button>
+    </div>
+    
+<h2><u>Detailed Explanation</u></h2>
+<p>For more understanding refer to the video as given below: </p>
+<div style="text-align:center">
+<iframe width="715" height="345" src="https://www.youtube.com/embed/NptnmWvkbTw">
+    </iframe>
+    </div>
+    
+
+</div>
+
+</body>
+</html>
